@@ -1,15 +1,21 @@
 <?php
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/PHPClass.php to edit this template
- */
+namespace Core;
 
 /**
  * Description of ConfigController
  *
- * @author inaldo.monteiro
+ * @copyright (c) year, Cesar Szpak - Celke
  */
-class ConfigController {
-    //put your code here
+class ConfigController
+{
+
+    private $Url;
+
+    public function __construct()
+    {
+        $this->Url = filter_input(INPUT_GET, 'url', FILTER_DEFAULT);
+        echo "URL: {$this->Url} <br>";
+    }
+
 }
